@@ -1,0 +1,63 @@
+/********************************************************************************/
+:root {
+    --header_background_color: #025FEB;
+    --links: #FFFFFF;
+    --links_hover: #F7F7F7;
+    --font_header: #182C62;
+}
+/********************************************************************************/
+* {    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/********************************************************************************/
+.float-container{
+    top: 50%;
+    vertical-align: middle;
+    
+}
+.div_header {
+    background-color: var(--header_background_color);
+    color: var(--white);
+    font-size: 16px;
+    height: 60px;
+    width: 100%;
+}
+.icon{
+    height: 30px;
+}
+/********************************************************************************/
+.logo{
+    margin-left: 30px;
+    width: 110px;
+}
+.div_logo {
+    float:left;
+    width: 10%;
+    
+}  
+/********************************************************************************/
+.div_links {
+    vertical-align: middle;
+    text-align: right;
+}
+.align_link {
+    margin-right: 40px;
+    vertical-align: middle;
+    text-align: right;
+}
+a:link {
+    color: var(--links);
+    text-decoration: none;
+}
+a:active {
+    text-decoration: underline;
+    color: var(--white);
+}
+a:visited {
+    color: var(--white);
+}
+a:hover {
+    color: var(--links_hover);
+}
