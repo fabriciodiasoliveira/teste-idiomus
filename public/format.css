@@ -10,9 +10,9 @@
     --heigh_header: 60px;
 }
 /********************************************************************************/
-@media screen and (max-width:1280px) {
-    .div_header {display:none}
-}
+/* @media screen and (max-width:1280px) {
+    .div_header {display:none};
+} */
 * {    
     margin: 0;
     padding: 0;
