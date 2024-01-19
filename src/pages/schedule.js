@@ -1,42 +1,30 @@
 import Header from "../pages/header";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Schedule_Graph from "./schedule/schedule_graph";
 function Schedule() {
-    const [results, setResults] = useState([])
-    const [access_token, setAccess_token] = useState('')
+    
+    const [jwttoken, setJwttoken] = useState('')
     function getAccessToken(){
-        axios.get('http://localhost:3001/api/v1/getAccessToken')
-          .then(resposta => {
-            setAccess_token(resposta.data.access_token);
-          })
-          .catch(erro => {
-            console.log(erro)
-          })
+        
     }
     
-    function getSchedule(){
-        axios.get('http://localhost:3001/api/v1/getAllMatches',
-        {
-          headers: {
-            'Authorization': `Bearer ${access_token}`
-          }
-        })
-          .then(resposta => {
-            setResults(resposta.data);
-          })
-          .catch(erro => {
-            console.log(erro)
-          })
-    }
+    
     useEffect(() => {
-        getAccessToken();
-        getSchedule();
-        console.log(results)
-      }, [])
+        axios.get('http://localhost:3001/api/v1/getAccessToken')
+            .then(resposta => {
+                const token = resposta.data.access_token;
+                setJwttoken(token)
+            })
+            .catch(erro => {
+                console.log(erro)
+            })
+    }, [])
+
     return (
         <div>
             <Header />
-            <h1>{access_token}</h1>
+            <h1><Schedule_Graph token={jwttoken}/></h1>
         </div>
     );
 }

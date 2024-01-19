@@ -8,6 +8,14 @@
 
     --margin_header: 0px;
     --heigh_header: 60px;
+
+    --schedule_padding_top: 60px;
+    --schedule_padding_left: 40px;
+    --font_size_header_pages: 24px;
+    --font_size_header_tables: 12px;
+    --font_size_non_bold_tables: 14px;
+    --font_size_bold_tables: 16px;
+    --font_color_header_tables: #ffffff;
 }
 /********************************************************************************/
 /* @media screen and (max-width:1280px) {
@@ -19,6 +27,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 /********************************************************************************/
+
 .float-container{
     height: 60px;
     top: 50%;
@@ -65,12 +74,27 @@ a:link {
     text-decoration: none;
 }
 a:active {
-    text-decoration: underline;
     color: var(--white);
 }
 a:visited {
     color: var(--white);
 }
 a:hover {
+    text-decoration: underline;
     color: var(--links_hover_color);
+}
+/********************************************************************************/
+.div_schedule{
+    padding-top: var(--schedule_padding_top);
+    padding-left: var(--schedule_padding_left);
+}
+.div_header_table{
+    font-size: var(--font_size_header_tables);
+    font-weight: bold;
+    background-color: var(--font_color_header_tables);
+}
+.div_table{
+    font-size: var(--font_size_header_tables);
+    font-weight: bold;
+    background-color: var(--font_color_header_tables);
 }

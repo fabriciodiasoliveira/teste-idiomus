@@ -1,7 +1,7 @@
 function NotFound() {
     return (
         <div>
-            <h1>404</h1>
+            <img className="icon" src="Images/404.png" alt="404 - Not Found" />
         </div>
     );
 }
