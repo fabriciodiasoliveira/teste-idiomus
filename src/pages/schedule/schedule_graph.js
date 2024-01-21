@@ -53,7 +53,7 @@ import { useEffect, useState } from "react";
                       {item.homeTeam}
                     </div>
                     <div className="col-md-2 div_table_bold">
-                      1:1
+                      {item.homeTeamScore}:{item.awayTeamScore}
                     </div>
                     <div className="col-md-2">
                       {item.awayTeam}
