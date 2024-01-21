@@ -9,8 +9,8 @@ function Header() {
                 </div>
 
                 <div className="div_links">
-                    <Link className="align_link" to="/"><img className="icon" src="Images/schedule.png" alt="Schedule Icon" />Schedule</Link>
-                    <Link className="align_link" to="/leaderboard"><img className="icon" src="Images/leaderboard.png" alt="Leaderboard Icon" />Leaderboard</Link>
+                    <Link to="/"><img className="icon" src="Images/schedule.png" alt="Schedule Icon" />Schedule</Link>
+                    <Link to="/leaderboard"><img className="icon" src="Images/leaderboard.png" alt="Leaderboard Icon" />Leaderboard</Link>
                 </div>
 
             </div>

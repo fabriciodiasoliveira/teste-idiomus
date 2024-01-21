@@ -9,7 +9,7 @@
     --margin_header: 0px;
     --heigh_header: 60px;
 
-    --schedule_padding_top: 60px;
+    --schedule_padding_top: 20px;
     --schedule_padding_left: 40px;
     --font_size_header_pages: 24px;
     --font_size_header_tables: 12px;
@@ -65,10 +65,6 @@
     margin-top: var(--margin_header);
     height: var(--heigh_header);
     padding-right: 40px;
-    text-align: right;
-}
-.align_link {
-    vertical-align: middle;
     text-align: right;
 }
 a:link {
