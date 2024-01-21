@@ -24,7 +24,10 @@ function Schedule() {
     return (
         <div>
             <Header />
-            <h1><Schedule_Graph token={jwttoken}/></h1>
+            <div className="div_title_schedule">
+                League Schedule
+            </div>
+            <Schedule_Graph token={jwttoken}/>
         </div>
     );
 }

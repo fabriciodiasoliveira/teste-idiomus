@@ -38,15 +38,24 @@ import { useEffect, useState } from "react";
                 results.map((item) => (
                   <div className="row div_table">
                     <div className="col-md-2">
-                      {item.matchDate}
+                        {
+                          new Date(item.matchDate).toLocaleDateString('en-US')
+                        }
+                        <br></br> 
+                        {
+                          new Date(item.matchDate).toLocaleTimeString('en-US')
+                        }
                     </div>
                     <div className="col-md-4">
                       {item.stadium}
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-2">
                       {item.homeTeam}
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-2 div_table_bold">
+                      1:1
+                    </div>
+                    <div className="col-md-2">
                       {item.awayTeam}
                     </div>
                   </div>

@@ -15,7 +15,9 @@
     --font_size_header_tables: 12px;
     --font_size_non_bold_tables: 14px;
     --font_size_bold_tables: 16px;
-    --font_color_header_tables: #ffffff;
+    --font_color_header_tables: #e4eef3;
+    --font_color_tables: #ffffff;
+    --font_size_header_table: 24px;
 }
 /********************************************************************************/
 /* @media screen and (max-width:1280px) {
@@ -46,11 +48,11 @@
 .logo{
     margin-left: 30px;
     width: 110px;
-    vertical-align: middle;
 }
 .div_logo {
+    display: flex;
+    align-items: center;
     margin-top: var(--margin_header);
-    vertical-align: middle;
     height: var(--heigh_header);
     float:left;
     width: 10%;
@@ -58,14 +60,14 @@
 }  
 /********************************************************************************/
 .div_links {
+    display: flex;
+    align-items: center;
     margin-top: var(--margin_header);
-
     height: var(--heigh_header);
-    vertical-align: middle;
+    padding-right: 40px;
     text-align: right;
 }
 .align_link {
-    margin-right: 40px;
     vertical-align: middle;
     text-align: right;
 }
@@ -84,17 +86,44 @@ a:hover {
     color: var(--links_hover_color);
 }
 /********************************************************************************/
+.div_title_schedule{
+    padding-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--font_size_header_table);
+}
 .div_schedule{
     padding-top: var(--schedule_padding_top);
     padding-left: var(--schedule_padding_left);
 }
 .div_header_table{
+    display: flex;
+    align-items: center;
     font-size: var(--font_size_header_tables);
     font-weight: bold;
+    height: 40px;
     background-color: var(--font_color_header_tables);
 }
 .div_table{
-    font-size: var(--font_size_header_tables);
+    display: flex;
+    align-items: center;
+    font-size: var(--font_size_non_bold_tables);
+    height: 70px;
+    background-color: var(--font_color_tables);
+}
+.div_table_bold{
+    display: flex;
+    align-items: center;
+    font-size: var(--font_size_bold_tables);
+    height: 70px;
     font-weight: bold;
-    background-color: var(--font_color_header_tables);
+    background-color: var(--font_color_tables);
+}
+/********************************************************************************/
+.div_not_found{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
