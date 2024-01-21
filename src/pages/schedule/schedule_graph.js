@@ -17,6 +17,9 @@ import { useEffect, useState } from "react";
     useEffect(() => {
       getSchedule();
     })
+    const showRow = event => {
+
+    }
       return (
         <div>
           <div className="div_schedule">
@@ -49,8 +52,8 @@ import { useEffect, useState } from "react";
                     <div className="col-md-4">
                       {item.stadium}
                     </div>
-                    <div className="col-md-2">
-                      {item.homeTeam}
+                    <div className="col-md-2 div_home_team">
+                      {item.homeTeam} <img className="icon" width={53} src='Images/flags/Brazil.svg' alt="Flag Brazil" />
                     </div>
                     <div className="col-md-2 div_table_bold">
                       {item.homeTeamScore}:{item.awayTeamScore}

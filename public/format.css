@@ -115,6 +115,15 @@ a:hover {
     font-weight: bold;
     background-color: var(--font_color_tables);
 }
+div_home_team{
+    display: flex;
+    align-items: end;
+}
+display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+}
 /********************************************************************************/
 .div_not_found{
     height: 100%;
