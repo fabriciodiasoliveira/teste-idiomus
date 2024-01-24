@@ -5,9 +5,6 @@ import Schedule_Graph from "./schedule/schedule_graph";
 function Schedule() {
     
     const [jwttoken, setJwttoken] = useState('')
-    function getAccessToken(){
-        
-    }
     
     
     useEffect(() => {

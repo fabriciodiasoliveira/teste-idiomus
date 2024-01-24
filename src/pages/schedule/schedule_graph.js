@@ -52,14 +52,14 @@ import { useEffect, useState } from "react";
                     <div className="col-md-4">
                       {item.stadium}
                     </div>
-                    <div className="col-md-2 div_home_team">
-                      {item.homeTeam} <img className="icon" width={53} src='Images/flags/Brazil.svg' alt="Flag Brazil" />
+                    <div className="col-md-2">
+                        {item.homeTeam} <img className="icon_cowtry" height="37" width="53" src={"Images/flags/" + item.homeTeam + ".svg"} alt={"Flag "+item.homeTeam} />
                     </div>
                     <div className="col-md-2 div_table_bold">
                       {item.homeTeamScore}:{item.awayTeamScore}
                     </div>
                     <div className="col-md-2">
-                      {item.awayTeam}
+                    <img className="icon_cowtry" src={"Images/flags/" + item.awayTeam + ".svg"} alt={"Flag "+item.awayTeam} />{item.awayTeam}
                     </div>
                   </div>
                 ))}
