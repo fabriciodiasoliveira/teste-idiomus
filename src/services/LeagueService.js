@@ -8,8 +8,15 @@
  *       ADDITIONALLY, MAKE SURE THAT ALL LIBRARIES USED IN THIS FILE FILE ARE COMPATIBLE WITH PURE JAVASCRIPT
  * 
  */
+import axios from "axios";
+import { useEffect, useState } from "react";
 class LeagueService {    
     
+    constructor() {
+        this.state = {
+            results: []
+        };
+    }
     /**
      * Sets the match schedule.
      * Match schedule will be given in the following form:
@@ -35,8 +42,13 @@ class LeagueService {
      * ]
      * 
      * @param {Array} matches List of matches.
-     */    
-    setMatches(matches) {}
+     */   
+    getSchedule(){
+        
+      } 
+    setMatches(matches) {
+        
+    }
 
     /**
      * Returns the full list of matches.
@@ -65,7 +77,21 @@ class LeagueService {
     /**
      * Asynchronic function to fetch the data from the server.
      */
-    async fetchData() {}    
+    setToken(token) {
+        this.state.token = token;
+    }
+    async fetchData() {
+        const token = this.state.token;
+        const headers = { 'Authorization': `Bearer ${token}` };
+        axios.get('http://localhost:3001/api/v1/getAllMatches', { headers })
+            .then(resposta => {
+                this.state.results = resposta.data.matches;
+                console.log(resposta.data.matches)
+            })
+            .catch(erro => {
+                console.log(erro)
+            })
+    }    
 }
 
 export default LeagueService;

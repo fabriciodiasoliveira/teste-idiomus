@@ -24,10 +24,10 @@ import { useEffect, useState } from "react";
         <div>
           <div className="div_schedule">
             <div className="row div_header_table">
-              <div className="col-md-2">
+              <div className="col-md-2 div_500">
                 Date/Time
               </div>
-              <div className="col-md-4">
+              <div className="col-md-4 div_750">
                 Stadium
               </div>
               <div className="col-md-3">
@@ -40,7 +40,7 @@ import { useEffect, useState } from "react";
             {results &&
                 results.map((item) => (
                   <div className="row div_table">
-                    <div className="col-md-2">
+                    <div className="col-md-2 div_500">
                         {
                           new Date(item.matchDate).toLocaleDateString('en-US')
                         }
@@ -49,17 +49,13 @@ import { useEffect, useState } from "react";
                           new Date(item.matchDate).toLocaleTimeString('en-US')
                         }
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 div_750">
                       {item.stadium}
                     </div>
-                    <div className="col-md-2">
+                    <div className="col-md-6 text-center">
                         {item.homeTeam} <img className="icon_cowtry" height="37" width="53" src={"Images/flags/" + item.homeTeam + ".svg"} alt={"Flag "+item.homeTeam} />
-                    </div>
-                    <div className="col-md-2 div_table_bold">
-                      {item.homeTeamScore}:{item.awayTeamScore}
-                    </div>
-                    <div className="col-md-2">
-                    <img className="icon_cowtry" src={"Images/flags/" + item.awayTeam + ".svg"} alt={"Flag "+item.awayTeam} />{item.awayTeam}
+                      <b>{item.homeTeamScore}:{item.awayTeamScore}</b>
+                      <img className="icon_cowtry" src={"Images/flags/" + item.awayTeam + ".svg"} alt={"Flag "+item.awayTeam} />{item.awayTeam}
                     </div>
                   </div>
                 ))}

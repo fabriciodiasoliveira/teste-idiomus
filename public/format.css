@@ -20,9 +20,6 @@
     --font_size_header_table: 24px;
 }
 /********************************************************************************/
-/* @media screen and (max-width:1280px) {
-    .div_header {display:none};
-} */
 * {    
     margin: 0;
     padding: 0;
@@ -85,6 +82,7 @@ a:hover {
 .icon_cowtry{
     width: 53px;
     height: 37px;
+    object-fit: cover;
 }
 .div_title_schedule{
     padding-top: 60px;
@@ -123,14 +121,13 @@ a:hover {
     margin-left: auto; 
     margin-right: 0;
 }
-.div_cell_table{
-
-}
 .div_home_team{
     margin-left: auto; 
     margin-right: 0; 
 }
-
+.div_cell_table{
+    float:left;
+}
 /********************************************************************************/
 .div_not_found{
     height: 100%;
@@ -139,3 +136,17 @@ a:hover {
     align-items: center;
     text-align: center;
 }
+/********************************************************************************/
+@media screen and (max-width:750px) {
+    .div_750 {display:none};
+}
+@media screen and (max-width:500px) {
+    .div_500 {display:none};
+}
+.div_750{
+
+}
+.div_500{
+
+}
+/********************************************************************************/
