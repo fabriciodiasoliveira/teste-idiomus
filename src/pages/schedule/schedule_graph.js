@@ -24,36 +24,36 @@ import { useEffect, useState } from "react";
         <div>
           <div className="div_schedule">
             <div className="row div_header_table">
-              <div className="col-md-2 div_500">
+              <div className="div_header_table div_500">
                 Date/Time
               </div>
-              <div className="col-md-4 div_750">
+              <div className="div_header_table div_750">
                 Stadium
               </div>
-              <div className="col-md-3">
+              <div className="div_header_table">
                 Home team
               </div>
-              <div className="col-md-3">
+              <div className="div_header_table">
                 Aways team
               </div>
             </div>
             {results &&
                 results.map((item) => (
                   <div className="row div_table">
-                    <div className="col-md-2 div_500">
+                    <div className="div_cell_table div_500">
                         {
                           new Date(item.matchDate).toLocaleDateString('en-US')
                         }
                         <br></br> 
                         {
-                          new Date(item.matchDate).toLocaleTimeString('en-US')
+                          new Date(item.matchDate).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
                         }
                     </div>
-                    <div className="col-md-4 div_750">
+                    <div className="div_cell_table div_750">
                       {item.stadium}
                     </div>
-                    <div className="col-md-6 text-center">
-                        {item.homeTeam} <img className="icon_cowtry" height="37" width="53" src={"Images/flags/" + item.homeTeam + ".svg"} alt={"Flag "+item.homeTeam} />
+                    <div className="div_cell_table text-right">
+                        {item.homeTeam} <img className="icon_cowtry" src={"Images/flags/" + item.homeTeam + ".svg"} alt={"Flag "+item.homeTeam} />
                       <b>{item.homeTeamScore}:{item.awayTeamScore}</b>
                       <img className="icon_cowtry" src={"Images/flags/" + item.awayTeam + ".svg"} alt={"Flag "+item.awayTeam} />{item.awayTeam}
                     </div>

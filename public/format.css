@@ -60,9 +60,9 @@
     display: flex;
     align-items: center;
     margin-top: var(--margin_header);
+    padding-left: 40px;
     height: var(--heigh_header);
-    padding-right: 40px;
-    text-align: right;
+    float: right;
 }
 a:link {
     color: var(--color_links);
@@ -118,8 +118,8 @@ a:hover {
     background-color: var(--font_color_tables);
 }
 .div_header_table{
-    margin-left: auto; 
-    margin-right: 0;
+    float:left;
+    width: 25%;
 }
 .div_home_team{
     margin-left: auto; 
@@ -127,6 +127,7 @@ a:hover {
 }
 .div_cell_table{
     float:left;
+    width: 33%;
 }
 /********************************************************************************/
 .div_not_found{
