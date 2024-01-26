@@ -24,16 +24,16 @@ import { useEffect, useState } from "react";
         <div>
           <div className="div_schedule">
             <div className="row div_header_table">
-              <div className="div_header_table div_500">
+              <div className="div_cell_header_table div_500">
                 Date/Time
               </div>
-              <div className="div_header_table div_750">
+              <div className="div_cell_header_table div_750">
                 Stadium
               </div>
-              <div className="div_header_table">
+              <div className="div_cell_header_table">
                 Home team
               </div>
-              <div className="div_header_table">
+              <div className="div_cell_header_table">
                 Aways team
               </div>
             </div>
